@@ -3,6 +3,7 @@ import "./App.css";
 import Titles from "./components/Titles";
 import Form from "./components/Form";
 import Weather from "./components/Weather";
+import API from "./components/API";
 
 class App extends Component {
   state = {
@@ -45,26 +46,29 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Titles />
-        <Form getWeather={this.getWeather} />
-        <Weather
-          temperature={this.state.temperature}
-          city={this.state.city}
-          country={this.state.country}
-          humidity={this.state.humidity}
-          description={this.state.description}
-          error={this.state.error}
-        />
-        <footer>
-          <img
-            style={{ width: "40pt" }}
-            src="https://home.openweathermap.org/assets/logo_white_cropped-011958e697955be95bdc4af6a4d1913dbf9df990cb9101a67c439879293f5947.png"
-            alt="OpenWeather"
-          />
-          <p>
-            API by <a href="https://openweathermap.org/">OpenWeather</a>
-          </p>
-        </footer>
+        <div class="wrapper">
+          <div class="main">
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-5 title-container">
+                  <Titles />
+                </div>
+                <div class="col-xs-7 form-container">
+                  <Form getWeather={this.getWeather} />
+                  <Weather
+                    temperature={this.state.temperature}
+                    city={this.state.city}
+                    country={this.state.country}
+                    humidity={this.state.humidity}
+                    description={this.state.description}
+                    error={this.state.error}
+                  />
+                  <API />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
