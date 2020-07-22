@@ -8,7 +8,14 @@ const API = () => (
       alt="OpenWeather Logo"
     />
     <p>
-      API by <a href="https://openweathermap.org/">OpenWeather</a>
+      API by{" "}
+      <a
+        href="https://openweathermap.org/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        OpenWeather
+      </a>
     </p>
   </footer>
 );
