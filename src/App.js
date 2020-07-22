@@ -46,25 +46,23 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div class="wrapper">
+        <div class="body">
           <div class="main">
-            <div class="container">
-              <div class="row">
-                <div class="col-xs-5 title-container">
-                  <Titles />
-                </div>
-                <div class="col-xs-7 form-container">
-                  <Form getWeather={this.getWeather} />
-                  <Weather
-                    temperature={this.state.temperature}
-                    city={this.state.city}
-                    country={this.state.country}
-                    humidity={this.state.humidity}
-                    description={this.state.description}
-                    error={this.state.error}
-                  />
-                  <API />
-                </div>
+            <div class="row">
+              <div class="col-xs-6 title-container">
+                <Titles />
+              </div>
+              <div class="col-xs-7 form-container">
+                <Form getWeather={this.getWeather} />
+                <Weather
+                  temperature={this.state.temperature}
+                  city={this.state.city}
+                  country={this.state.country}
+                  humidity={this.state.humidity}
+                  description={this.state.description}
+                  error={this.state.error}
+                />
+                <API />
               </div>
             </div>
           </div>
